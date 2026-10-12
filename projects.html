@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Учебные проекты: поиск, фильтрация и сортировка демонстрационных примеров."
+    />
+    <title>Проекты — Тензор | Ярославль</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-page text-dark font-sans">
+    <header class="bg-white shadow-sm">
+      <div
+        class="header-wrap max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3"
+          aria-label="На главную"
+          ><img src="assets/img/logo-mark.svg" alt="" class="h-8 w-auto" /><span
+            class="logo-text text-xl sm:text-2xl font-extrabold"
+            >Тензор | Ярославль</span
+          ></a
+        >
+        <div class="relative flex items-center gap-5 md:gap-8">
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-semibold"
+            aria-label="Основная навигация"
+          >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="index.html"
+              >Главная</a
+            >
+            <a
+              class="page-link active hover:text-brand focus:outline-none focus:text-brand"
+              href="projects.html"
+              >Проекты</a
+            >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="career.html"
+              >Карьера</a
+            >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="contact.html"
+              >Контакты</a
+            >
+          </nav>
+          <button
+            type="button"
+            data-menu-button
+            class="rounded-full bg-brand px-8 py-3 text-sm font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+          >
+            Меню
+          </button>
+          <div
+            data-menu-panel
+            class="menu-panel absolute right-0 top-14 z-30 w-64 rounded-3xl bg-white p-4 shadow-card border border-slate-100"
+          >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="index.html"
+              >Главная</a
+            >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="career.html"
+              >Стажировка</a
+            >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="contact.html"
+              >Связаться с нами</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        data-mobile-menu
+        class="mobile-menu md:hidden border-t border-slate-100 bg-white px-4 pb-4"
+      >
+        <a class="block py-3 font-semibold" href="index.html">Главная</a
+        ><a class="block py-3 font-semibold text-brand" href="projects.html"
+          >Проекты</a
+        ><a class="block py-3 font-semibold" href="career.html">Карьера</a
+        ><a class="block py-3 font-semibold" href="contact.html">Контакты</a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="py-14 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1
+            class="border-l-4 border-brand pl-5 text-3xl sm:text-4xl font-extrabold"
+          >
+            Наши проекты
+          </h1>
+
+          <form
+            id="projectFilters"
+            class="mt-8 grid gap-4 sm:grid-cols-3"
+            role="search"
+          >
+            <label class="font-semibold"
+              >Поиск<input
+                type="search"
+                name="q"
+                maxlength="100"
+                placeholder="Название или описание"
+                class="mt-2 w-full rounded-xl border border-slate-300 search-field"
+            /></label>
+            <label class="font-semibold"
+              >Направление<select
+                name="category"
+                class="mt-2 w-full rounded-xl border border-slate-300 p-3"
+              >
+                <option value="all">Все</option>
+                <option value="automation">Автоматизация</option>
+                <option value="documents">Документооборот</option>
+                <option value="logistics">Логистика</option>
+              </select></label
+            >
+            <label class="font-semibold"
+              >Порядок<select
+                name="sort"
+                class="mt-2 w-full rounded-xl border border-slate-300 p-3"
+              >
+                <option value="newest">Новые сначала</option>
+                <option value="title">По названию</option>
+                <option value="category">По направлению</option>
+              </select></label
+            >
+            <label class="font-semibold">Заказчик<select name="client_id" data-client-filter class="mt-2 w-full rounded-xl border border-slate-300 p-3"><option value="">Все заказчики</option></select></label>
+            <label class="font-semibold">Технология<select name="tag" data-tag-filter class="mt-2 w-full rounded-xl border border-slate-300 p-3"><option value="all">Все технологии</option></select></label>
+            <button type="reset" class="mt-6 rounded-xl border border-slate-300 p-3 font-semibold">Сбросить фильтры</button>
+          </form>
+          <p
+            id="projectStatus"
+            role="status"
+            aria-live="polite"
+            class="mt-5 text-muted"
+          >
+            Загрузка проектов…
+          </p>
+          <div id="projectList" class="mt-6 grid gap-8 md:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <section class="pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="border-l-4 border-brand pl-5 text-3xl font-extrabold">
+            Этапы работы
+          </h2>
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-2xl bg-white p-6 shadow-card">
+              <span
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-50 font-bold text-brand"
+                >1</span
+              >
+              <h3 class="mt-5 text-lg font-bold">Анализ задачи</h3>
+              <p class="mt-3 text-sm text-muted">
+                Сбор требований и описание процесса.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-white p-6 shadow-card">
+              <span
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-50 font-bold text-brand"
+                >2</span
+              >
+              <h3 class="mt-5 text-lg font-bold">Прототип</h3>
+              <p class="mt-3 text-sm text-muted">
+                Каркас интерфейса и согласование логики.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-white p-6 shadow-card">
+              <span
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-50 font-bold text-brand"
+                >3</span
+              >
+              <h3 class="mt-5 text-lg font-bold">Разработка</h3>
+              <p class="mt-3 text-sm text-muted">
+                Верстка, интеграция и тестирование.
+              </p>
+            </div>
+            <div class="rounded-2xl bg-white p-6 shadow-card">
+              <span
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-50 font-bold text-brand"
+                >4</span
+              >
+              <h3 class="mt-5 text-lg font-bold">Внедрение</h3>
+              <p class="mt-3 text-sm text-muted">
+                Запуск, обучение и поддержка.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-auto bg-dark py-8 text-center text-sm text-white/75">
+      <p>© 2026 Тензор — Ярославль. Учебный неофициальный проект.</p>
+    </footer>
+
+    <div
+      data-modal
+      role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"
+      class="modal-backdrop fixed inset-0 z-50 items-center justify-center bg-slate-950/60 p-4"
+    >
+      <div class="w-full max-w-xl rounded-3xl bg-white p-8 shadow-card">
+        <div class="flex items-start justify-between gap-6">
+          <h2 id="modal-title" data-modal-title class="text-2xl font-extrabold">Заголовок</h2>
+          <button
+            type="button"
+            data-modal-close
+            class="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-4 focus:ring-blue-200"
+          >
+            ×
+          </button>
+        </div>
+        <p data-modal-text class="mt-5 text-muted">Описание</p>
+        <button
+          type="button"
+          data-modal-close
+          class="mt-8 w-full rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+        >
+          Понятно
+        </button>
+      </div>
+    </div>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

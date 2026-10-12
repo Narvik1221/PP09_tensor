@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Учебный сайт о направлениях IT-разработки, автоматизации и команде в Ярославле."
+    />
+    <title>Тензор | Ярославль — IT-решения</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-page text-dark font-sans">
+    <header class="bg-white shadow-sm">
+      <div
+        class="header-wrap max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3"
+          aria-label="На главную"
+        >
+          <img src="assets/img/logo-mark.svg" alt="" class="h-8 w-auto" />
+          <span class="logo-text text-xl sm:text-2xl font-extrabold"
+            >Тензор | Ярославль</span
+          >
+        </a>
+        <div class="relative flex items-center gap-5 md:gap-8">
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-semibold"
+            aria-label="Основная навигация"
+          >
+            <a
+              class="page-link active hover:text-brand focus:outline-none focus:text-brand"
+              href="index.html"
+              >Главная</a
+            >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="projects.html"
+              >Проекты</a
+            >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="career.html"
+              >Карьера</a
+            >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="contact.html"
+              >Контакты</a
+            >
+          </nav>
+          <button
+            type="button"
+            data-menu-button
+            class="rounded-full bg-brand px-8 py-3 text-sm font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+          >
+            Меню
+          </button>
+          <div
+            data-menu-panel
+            class="menu-panel absolute right-0 top-14 z-30 w-64 rounded-3xl bg-white p-4 shadow-card border border-slate-100"
+          >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="projects.html"
+              >Реализованные проекты</a
+            >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="career.html"
+              >Стажировка</a
+            >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="contact.html"
+              >Связаться с нами</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        data-mobile-menu
+        class="mobile-menu md:hidden border-t border-slate-100 bg-white px-4 pb-4"
+      >
+        <a class="block py-3 font-semibold text-brand" href="index.html"
+          >Главная</a
+        >
+        <a class="block py-3 font-semibold" href="projects.html">Проекты</a>
+        <a class="block py-3 font-semibold" href="career.html">Карьера</a>
+        <a class="block py-3 font-semibold" href="contact.html">Контакты</a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="bg-blue-50/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24">
+          <div class="grid gap-10 md:grid-cols-2 items-center">
+            <div>
+              <p
+                class="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-brand"
+              >
+                ООО «Компания «Тензор»
+              </p>
+              <h1
+                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight"
+              >
+                IT-решения <span class="text-brand">для бизнеса</span>
+              </h1>
+              <p class="mt-6 text-lg text-muted">
+                Разработка, интеграции и консультации для компаний Ярославля.
+                Простые цифровые сервисы для учета, склада и документооборота.
+              </p>
+              <a
+                href="#services"
+                class="mt-8 inline-flex rounded-full bg-brand px-9 py-4 text-base font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                >Узнать больше</a
+              >
+            </div>
+            <div class="overflow-hidden rounded-3xl bg-white shadow-card">
+              <img
+                class="hero-photo"
+                src="assets/img/office-light.webp"
+                alt="Рабочее пространство в офисе"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-14 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="border-l-4 border-brand pl-5 text-3xl font-extrabold">
+            Основные направления
+          </h2>
+          <div class="mt-8 grid gap-8 md:grid-cols-3">
+            <article class="card-hover rounded-3xl bg-white p-8 shadow-card">
+              <h3 class="text-2xl font-bold">Разработка ПО</h3>
+              <p class="mt-4 text-muted">
+                ERP, CRM и заказные системы под ключ для производственных
+                компаний.
+              </p>
+              <a
+                href="projects.html"
+                class="mt-7 inline-flex w-full justify-center rounded-full border-2 border-brand px-6 py-3 font-semibold text-brand transition hover:bg-brand hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200"
+                >Подробнее</a
+              >
+            </article>
+            <article class="card-hover rounded-3xl bg-white p-8 shadow-card">
+              <h3 class="text-2xl font-bold">Автоматизация</h3>
+              <p class="mt-4 text-muted">
+                Склад, документооборот, отчетность и контроль этапов работы.
+              </p>
+              <a
+                href="projects.html"
+                class="mt-7 inline-flex w-full justify-center rounded-full border-2 border-brand px-6 py-3 font-semibold text-brand transition hover:bg-brand hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200"
+                >Подробнее</a
+              >
+            </article>
+            <article class="card-hover rounded-3xl bg-white p-8 shadow-card">
+              <h3 class="text-2xl font-bold">Консалтинг</h3>
+              <p class="mt-4 text-muted">
+                Аудит IT-инфраструктуры, подбор решений и сопровождение
+                внедрения.
+              </p>
+              <a
+                href="contact.html"
+                class="mt-7 inline-flex w-full justify-center rounded-full border-2 border-brand px-6 py-3 font-semibold text-brand transition hover:bg-brand hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200"
+                >Связаться</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-8 md:grid-cols-2">
+            <article class="rounded-3xl bg-white p-8 shadow-card">
+              <h2 class="border-l-4 border-brand pl-5 text-3xl font-extrabold">
+                Характеристика предприятия
+              </h2>
+              <p class="mt-5 text-muted">
+                ООО «Компания «Тензор» — IT-компания, которая занимается
+                разработкой и внедрением программных продуктов для бизнеса.
+                Ярославский офис рассматривается как центр разработки и
+                сопровождения цифровых сервисов.
+              </p>
+              <ul class="mt-6 space-y-3 text-muted">
+                <li>
+                  • сфера деятельности: веб-сервисы, учетные системы, ЭДО;
+                </li>
+                <li>• роль в проекте: учебная верстка корпоративного сайта;</li>
+                <li>
+                  • задачи сайта: показать услуги, проекты, карьеру и контакты;
+                </li>
+                <li>• рабочее место: ПК, VS Code, Figma, браузер и Git.</li>
+              </ul>
+            </article>
+            <article class="rounded-3xl bg-white p-8 shadow-card">
+              <h2 class="border-l-4 border-brand pl-5 text-3xl font-extrabold">
+                Почему выбирают нас
+              </h2>
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div class="feature-card rounded-2xl bg-blue-50 p-6">
+                  <span class="font-bold text-brand">01</span>
+                  <h3 class="mt-3 font-bold">Опыт в B2B</h3>
+                  <p class="mt-2 text-sm text-muted">
+                    Проекты для среднего и крупного бизнеса.
+                  </p>
+                </div>
+                <div class="feature-card rounded-2xl bg-blue-50 p-6">
+                  <span class="font-bold text-brand">02</span>
+                  <h3 class="mt-3 font-bold">Быстрое внедрение</h3>
+                  <p class="mt-2 text-sm text-muted">
+                    Понятные этапы и контроль сроков.
+                  </p>
+                </div>
+                <div class="feature-card rounded-2xl bg-blue-50 p-6">
+                  <span class="font-bold text-brand">03</span>
+                  <h3 class="mt-3 font-bold">Поддержка</h3>
+                  <p class="mt-2 text-sm text-muted">
+                    Обучение пользователей после запуска.
+                  </p>
+                </div>
+                <div class="feature-card rounded-2xl bg-blue-50 p-6">
+                  <span class="font-bold text-brand">04</span>
+                  <h3 class="mt-3 font-bold">Безопасность</h3>
+                  <p class="mt-2 text-sm text-muted">
+                    Стабильная инфраструктура и защита данных.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="rounded-3xl bg-white p-6 sm:p-8 shadow-card">
+            <div
+              class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div>
+                <h2 class="text-3xl font-extrabold">Примеры решений</h2>
+                <p class="mt-2 text-muted">
+                  Карусель показывает реальные растровые изображения,
+                  используемые в проекте.
+                </p>
+              </div>
+              <div class="flex gap-3">
+                <button
+                  type="button"
+                  data-carousel-prev
+                  class="rounded-full border-2 border-brand px-5 py-2 font-semibold text-brand transition hover:bg-brand hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200"
+                >
+                  Назад
+                </button>
+                <button
+                  type="button"
+                  data-carousel-next
+                  class="rounded-full bg-brand px-5 py-2 font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+                >
+                  Вперёд
+                </button>
+              </div>
+            </div>
+            <div class="mt-8">
+              <article
+                class="carousel-slide active gap-8 md:grid-cols-2 items-center"
+                data-slide
+              >
+                <img
+                  class="photo-cover rounded-3xl shadow-card"
+                  src="assets/img/dev-office.webp"
+                  alt="Компьютер на рабочем месте"
+                />
+                <div>
+                  <h3 class="text-2xl font-bold">Рабочее место специалиста</h3>
+                  <p class="mt-4 text-muted">
+                    Редактор кода, браузер, Figma и Git используются для
+                    подготовки интерфейса и проверки верстки.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="carousel-slide gap-8 md:grid-cols-2 items-center"
+                data-slide
+              >
+                <img
+                  class="photo-cover rounded-3xl shadow-card"
+                  src="assets/img/warehouse.webp"
+                  alt="Склад с товарами на паллетах"
+                />
+                <div>
+                  <h3 class="text-2xl font-bold">Складские решения</h3>
+                  <p class="mt-4 text-muted">
+                    Пример направления для автоматизации WMS: хранение, учет,
+                    приемка и отгрузка.
+                  </p>
+                </div>
+              </article>
+              <article
+                class="carousel-slide gap-8 md:grid-cols-2 items-center"
+                data-slide
+              >
+                <img
+                  class="photo-cover rounded-3xl shadow-card"
+                  src="assets/img/team.webp"
+                  alt="Команда сотрудников в офисе"
+                />
+                <div>
+                  <h3 class="text-2xl font-bold">Командная работа</h3>
+                  <p class="mt-4 text-muted">
+                    Проектирование, прототипирование и согласование интерфейса
+                    выполняются по этапам.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-auto bg-dark py-8 text-center text-sm text-white/75">
+      <p>© 2026 Тензор — Ярославль. Учебный неофициальный проект.</p>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

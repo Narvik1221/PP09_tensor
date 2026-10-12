@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Информация о стажировке и навыках веб-разработки в учебном проекте."
+    />
+    <title>Карьера — Тензор | Ярославль</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body class="min-h-screen flex flex-col bg-page text-dark font-sans">
+    <header class="bg-white shadow-sm">
+      <div
+        class="header-wrap max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-3"
+          aria-label="На главную"
+          ><img src="assets/img/logo-mark.svg" alt="" class="h-8 w-auto" /><span
+            class="logo-text text-xl sm:text-2xl font-extrabold"
+            >Тензор | Ярославль</span
+          ></a
+        >
+        <div class="relative flex items-center gap-5 md:gap-8">
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-semibold"
+            aria-label="Основная навигация"
+          >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="index.html"
+              >Главная</a
+            >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="projects.html"
+              >Проекты</a
+            >
+            <a
+              class="page-link active hover:text-brand focus:outline-none focus:text-brand"
+              href="career.html"
+              >Карьера</a
+            >
+            <a
+              class="page-link hover:text-brand focus:outline-none focus:text-brand"
+              href="contact.html"
+              >Контакты</a
+            >
+          </nav>
+          <button
+            type="button"
+            data-menu-button
+            class="rounded-full bg-brand px-8 py-3 text-sm font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+          >
+            Меню
+          </button>
+          <div
+            data-menu-panel
+            class="menu-panel absolute right-0 top-14 z-30 w-64 rounded-3xl bg-white p-4 shadow-card border border-slate-100"
+          >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="index.html"
+              >Главная</a
+            >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="projects.html"
+              >Проекты</a
+            >
+            <a
+              class="block rounded-2xl px-4 py-3 text-sm font-semibold hover:bg-blue-50 hover:text-brand"
+              href="contact.html"
+              >Связаться с нами</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        data-mobile-menu
+        class="mobile-menu md:hidden border-t border-slate-100 bg-white px-4 pb-4"
+      >
+        <a class="block py-3 font-semibold" href="index.html">Главная</a
+        ><a class="block py-3 font-semibold" href="projects.html">Проекты</a
+        ><a class="block py-3 font-semibold text-brand" href="career.html"
+          >Карьера</a
+        ><a class="block py-3 font-semibold" href="contact.html">Контакты</a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <section class="py-14 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 md:grid-cols-2 items-start">
+            <div>
+              <h1
+                class="border-l-4 border-brand pl-5 text-3xl sm:text-4xl font-extrabold"
+              >
+                Присоединяйтесь к команде
+              </h1>
+              <p class="mt-6 text-lg text-muted">
+                Мы ищем разработчиков, тестировщиков, аналитиков и дизайнеров.
+                Страница подходит для учебного проекта и показывает блоки
+                карьеры.
+              </p>
+              <ul class="mt-8 space-y-5">
+                <li class="flex items-start gap-3">
+                  <img
+                    src="assets/img/check.svg"
+                    alt=""
+                    class="mt-1 h-5 w-5"
+                  /><span>Гибкий график и гибридный формат</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <img
+                    src="assets/img/check.svg"
+                    alt=""
+                    class="mt-1 h-5 w-5"
+                  /><span>Наставничество и оплата курсов</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <img
+                    src="assets/img/check.svg"
+                    alt=""
+                    class="mt-1 h-5 w-5"
+                  /><span>Корпоративные мероприятия и ДМС</span>
+                </li>
+              </ul>
+
+              <div class="mt-10">
+                <h2 class="font-bold">Ваши навыки после стажировки:</h2>
+                <div class="mt-5 space-y-5">
+                  <div>
+                    <div class="flex justify-between text-sm">
+                      <span>HTML/CSS</span><span>90%</span>
+                    </div>
+                    <div class="progress-line mt-2">
+                      <span style="--value: 90%"></span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-sm">
+                      <span>Tailwind</span><span>85%</span>
+                    </div>
+                    <div class="progress-line mt-2">
+                      <span style="--value: 85%"></span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between text-sm">
+                      <span>JavaScript</span><span>70%</span>
+                    </div>
+                    <div class="progress-line mt-2">
+                      <span style="--value: 70%"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                data-modal-open
+                data-modal-title="Отклик на стажировку"
+                data-modal-text="Для учебного сайта заявка не отправляется на сервер. В рабочем проекте здесь подключается форма отклика или ссылка на HR-систему."
+                class="mt-10 rounded-full bg-brand px-9 py-4 font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+              >
+                Откликнуться
+              </button>
+            </div>
+
+            <div class="space-y-8">
+              <article class="overflow-hidden rounded-3xl bg-white shadow-card">
+                <img
+                  class="photo-cover"
+                  src="assets/img/team.webp"
+                  alt="Команда сотрудников в офисе"
+                />
+                <div class="p-8">
+                  <h2 class="text-2xl font-bold text-brand">
+                    Офис в Ярославле
+                  </h2>
+                  <p class="mt-3 text-muted">
+                    Пространство для разработки, обучения и командной работы.
+                  </p>
+                </div>
+              </article>
+              <a
+                href="contact.html"
+                class="inline-flex w-full justify-center rounded-full border-2 border-brand px-6 py-3 font-semibold text-brand transition hover:bg-brand hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-200"
+                >Записаться на тур по офису</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-auto bg-dark py-8 text-center text-sm text-white/75">
+      <p>© 2026 Тензор — Ярославль. Учебный неофициальный проект.</p>
+    </footer>
+
+    <div
+      data-modal
+      role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"
+      class="modal-backdrop fixed inset-0 z-50 items-center justify-center bg-slate-950/60 p-4"
+    >
+      <div class="w-full max-w-xl rounded-3xl bg-white p-8 shadow-card">
+        <div class="flex items-start justify-between gap-6">
+          <h2 id="modal-title" data-modal-title class="text-2xl font-extrabold">Заголовок</h2>
+          <button
+            type="button"
+            data-modal-close
+            class="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700 hover:bg-slate-200 focus:outline-none focus:ring-4 focus:ring-blue-200"
+          >
+            ×
+          </button>
+        </div>
+        <p data-modal-text class="mt-5 text-muted">Описание</p>
+        <a
+          href="contact.html"
+          class="mt-8 inline-flex w-full justify-center rounded-full bg-brand px-6 py-3 font-semibold text-white transition hover:bg-accent focus:outline-none focus:ring-4 focus:ring-blue-200"
+          >Перейти к контактам</a
+        >
+      </div>
+    </div>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>
